@@ -1,0 +1,6 @@
+@using PlacesToGo.Models;
+<h1>@Model.GetCityName()</h1>
+<form action="/places/@Model.GetId()" method="post">
+  <button type="submit">Delete</button>
+</form>
+<a href="/places">Go back</a>

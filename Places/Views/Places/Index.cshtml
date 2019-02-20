@@ -1,0 +1,9 @@
+@using PlacesToGo.Models;
+<h1>Places</h1>
+@foreach(Place place in Model)
+{
+  <p><a href="/places/@place.GetId()">@place.GetCityName()</a></p>
+  <br>
+}
+<br>
+<a href="/places/new">Add new place</a>
