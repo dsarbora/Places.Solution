@@ -22,7 +22,7 @@ namespace PlacesToGo.Controllers
     public ActionResult Create(string cityName)
     {
       Place newPlace = new Place(cityName);
-      return RedirectToAction("Index");
+      return RedirectToAction(/*"Create",*/ "Index");
     }
 
     [HttpGet("/places/{id}")]
