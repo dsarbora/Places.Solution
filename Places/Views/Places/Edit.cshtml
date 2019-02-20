@@ -1,0 +1,8 @@
+@using PlacesToGo.Models;
+
+<h1>Edit Place</h1>
+<form action="/places/update/@Model.GetId()" method="post">
+  <label for="cityName">City Name</label>
+  <input id="cityName" name="cityName" type="text" value="@Model.GetCityName()">
+  <button type="submit">Submit</button>
+</form>

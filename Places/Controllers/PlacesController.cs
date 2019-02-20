@@ -38,5 +38,18 @@ namespace PlacesToGo.Controllers
       Place.Delete(id);
       return RedirectToAction("Index");
     }
+
+    [HttpGet("/places/{id}/edit")]
+    public ActionResult Edit(int id)
+    {
+      return View(Place.Find(id));
+    }
+
+    [HttpPost("/places/update/{id}")]
+    public ActionResult Update(int id, string cityName)
+    {
+      Place.Find(id).SetCityName(cityName);
+      return RedirectToAction("Show", id);
+    }
   }
 }
